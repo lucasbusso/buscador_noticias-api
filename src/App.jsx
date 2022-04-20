@@ -1,7 +1,18 @@
+import { Container, Grid, Typography } from '@mui/material'
+
+import Formulario from './components/Formulario'
+
 function App() {
 
   return (
-    <h1>App</h1>
+    <Container>
+      <header>
+        <Typography align='center' marginY={5} component='h1' variant='h1' >
+          Buscador de Noticias 
+        </Typography>
+      </header>
+      <Formulario />
+    </Container>
   )
 }
 
