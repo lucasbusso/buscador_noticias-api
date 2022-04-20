@@ -14,7 +14,7 @@ const CATEGORIAS = [
 const Formulario = () => {
   return (
     <form>
-        <FormControl>
+        <FormControl fullWidth>
             <InputLabel>Categoría</InputLabel>
             <Select 
                 label='Categoría'
@@ -28,10 +28,11 @@ const Formulario = () => {
                     </MenuItem>
                 ))}
             </Select>
-            <Box>
+            <Box sx={{ marginTop: 2}}>
                 <Button
                     fullWidth
                     variant='contained'
+                    color='primary'
                     
                 >
                     Buscar
