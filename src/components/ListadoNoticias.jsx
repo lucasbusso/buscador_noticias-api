@@ -6,7 +6,7 @@ import useNoticias from '../hooks/useNoticias'
 import Noticia from './Noticia'
 
 const ListadoNoticias = () => {
-  const { noticias, totalNoticias } = useNoticias()
+  const { noticias, totalNoticias, handleChangePagina, pagina } = useNoticias()
     
   const totalPaginas = Math.ceil(totalNoticias / 20)
   
@@ -22,9 +22,13 @@ const ListadoNoticias = () => {
         </Typography>
 
         <Stack spacing={2} justifyContent='center' alignItems='center' sx={{marginY:5}}>
-            <Pagination count={totalPaginas} color="primary" />
+            <Pagination 
+                count={totalPaginas} 
+                color="primary" 
+                onChange={handleChangePagina}
+            />
         </Stack>
-        
+
         <Grid
             container
             spacing={2}
@@ -37,7 +41,11 @@ const ListadoNoticias = () => {
             ))}
         </Grid>
         <Stack spacing={2} justifyContent='center' alignItems='center' sx={{marginY:5}}>
-            <Pagination count={totalPaginas} color="primary" />
+            <Pagination 
+                count={totalPaginas} 
+                color="primary" 
+                onChange={handleChangePagina}
+            />
         </Stack>
     </>
   )
